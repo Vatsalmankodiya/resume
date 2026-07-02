@@ -2,37 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Vatsal Mankodiya | Full Stack Web Developer in Ahmedabad</title>
+  <title>Vatsal Mankodiya | Full Stack Web Developer Portfolio</title>
 
   <!-- Core SEO Meta Tags -->
-  <meta name="description" content="Vatsal Mankodiya is a full-stack web developer from Ahmedabad, Gujarat, skilled in PHP Laravel, MEAN and MERN stacks. M.Sc. IT graduate currently interning at Seanergy Excellence. Explore projects, experience, skills and get in touch for internships and entry-level roles." />
-  <meta name="keywords" content="Vatsal Mankodiya, Full Stack Developer Ahmedabad, PHP Laravel Developer, MEAN Stack Developer, MERN Stack Developer, Web Developer Gujarat, Django Developer, Angular Developer, React Developer, Node.js Developer, Seanergy Excellence, Software Engineer India, M.Sc IT Graduate" />
+  <meta name="description" content="Vatsal Mankodiya is a full-stack web developer from Ahmedabad, Gujarat, experienced in PHP Laravel, MEAN and MERN stacks. Explore projects, experience, skills, education and ways to get in touch for internships and entry-level roles." />
+  <meta name="keywords" content="Vatsal Mankodiya, Full Stack Developer, PHP Laravel Developer, MEAN Stack Developer, MERN Stack Developer, Web Developer Ahmedabad, Django Developer, Angular Developer, Node.js Developer, Seanergy Excellence, Portfolio, Software Engineer India" />
   <meta name="author" content="Vatsal Mankodiya" />
   <meta name="robots" content="index, follow" />
-  <meta name="googlebot" content="index, follow" />
   <meta name="language" content="English" />
   <meta name="revisit-after" content="7 days" />
-  <meta name="theme-color" content="#ece7d9" />
-  <meta name="format-detection" content="telephone=yes" />
+  <meta name="theme-color" content="#0a0e14" />
   <link rel="canonical" href="https://vatsalmankodiya-portfolio.vercel.app/" />
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="profile" />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vatsalmankodiya-portfolio.vercel.app/" />
-  <meta property="og:title" content="Vatsal Mankodiya | Full Stack Web Developer in Ahmedabad" />
-  <meta property="og:description" content="Full-stack web developer skilled in PHP Laravel, MEAN and MERN stacks. M.Sc. IT graduate. Explore projects, experience and skills, and get in touch for internships and entry-level roles." />
+  <meta property="og:title" content="Vatsal Mankodiya | Full Stack Web Developer Portfolio" />
+  <meta property="og:description" content="Full-stack web developer experienced in PHP Laravel, MEAN and MERN stacks. Explore projects, experience and skills, and get in touch for internships and entry-level roles." />
   <meta property="og:image" content="https://vatsalmankodiya-portfolio.vercel.app/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Vatsal Mankodiya Portfolio" />
-  <meta property="profile:first_name" content="Vatsal" />
-  <meta property="profile:last_name" content="Mankodiya" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vatsal Mankodiya | Full Stack Web Developer in Ahmedabad" />
-  <meta name="twitter:description" content="Full-stack web developer skilled in PHP Laravel, MEAN and MERN stacks. Explore projects, experience and skills." />
+  <meta name="twitter:title" content="Vatsal Mankodiya | Full Stack Web Developer Portfolio" />
+  <meta name="twitter:description" content="Full-stack web developer experienced in PHP Laravel, MEAN and MERN stacks. Explore projects, experience and skills." />
   <meta name="twitter:image" content="https://vatsalmankodiya-portfolio.vercel.app/og-image.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,13 +52,10 @@
       "HTML", "CSS", "JavaScript", "C++", "PHP", "Laravel", "Angular", "React",
       "Node.js", "Express.js", "Django", "MongoDB", "MySQL", "REST APIs"
     ],
-    "alumniOf": [
-      {
-        "@type": "CollegeOrUniversity",
-        "name": "Lok Jagruti Kendra University College",
-        "sameAs": ""
-      }
-    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Lok Jagruti Kendra University College"
+    },
     "worksFor": {
       "@type": "Organization",
       "name": "Seanergy Excellence Pvt Ltd"
@@ -74,442 +65,1067 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --bg: #0a0e14;
+      --bg-soft: #0d131c;
+      --surface: #121924;
+      --surface-2: #161f2b;
+      --border: #232e3d;
+      --border-strong: #30404f;
+      --text: #e8eef5;
+      --muted: #8b98a9;
+      --muted-2: #63707f;
+      --accent: #34d399;
+      --accent-dim: rgba(52, 211, 153, 0.14);
+      --accent-2: #f5b942;
+      --accent-2-dim: rgba(245, 185, 66, 0.14);
+      --code-key: #7dd3fc;
+      --code-str: #f5b942;
+      --code-kw: #c4a7f5;
+      --code-comment: #4c5a6b;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --font-display: "Space Grotesk", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      --font-body: "Inter", system-ui, -apple-system, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background:
+        radial-gradient(900px 500px at 85% -10%, rgba(52, 211, 153, 0.10), transparent 60%),
+        radial-gradient(700px 500px at -10% 20%, rgba(245, 185, 66, 0.06), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .wrapper { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+    ::selection { background: var(--accent-dim); color: var(--accent); }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(10, 14, 20, 0.92), rgba(10, 14, 20, 0.75) 70%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 0.65rem; }
+
+    .nav-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: linear-gradient(145deg, var(--surface-2), var(--surface));
+      border: 1px solid var(--border-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--accent);
+    }
+
+    .nav-title { display: flex; flex-direction: column; }
+
+    .nav-title span:first-child {
+      font-family: var(--font-mono);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      font-size: 0.72rem;
+      color: var(--muted-2);
+    }
+
+    .nav-title span:last-child {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; font-size: 0.85rem; }
+
+    .nav-links a {
+      position: relative;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      font-weight: 400;
+      font-size: 0.78rem;
+    }
+
+    .nav-links a::before { content: "" attr(data-num) "· "; color: var(--accent); }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-resume {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      background: var(--surface);
+    }
+
+    .nav-resume:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* HERO */
+    .hero {
+      padding: 4rem 0 1.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+      color: var(--accent);
+      margin-bottom: 1.1rem;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(52, 211, 153, 0.8);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.3rem, 4.2vw, 3.1rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.12;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-title .accent-text { color: var(--accent); }
+
+    .hero-sub {
+      font-size: 1.02rem;
+      color: var(--muted);
+      max-width: 34rem;
+      margin-bottom: 1.7rem;
+    }
+
+    .hero-sub strong { color: var(--text); font-weight: 600; }
+    .hero-sub code {
+      font-family: var(--font-mono);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.05rem 0.4rem;
+      border-radius: 5px;
+      font-size: 0.9em;
+      color: var(--accent-2);
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.9rem; }
+
+    .btn {
+      border-radius: 10px;
+      padding: 0.7rem 1.4rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #04170f;
+      box-shadow: 0 10px 30px rgba(52, 211, 153, 0.25);
+    }
+
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 34px rgba(52, 211, 153, 0.35); }
+
+    .btn-ghost {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--border-strong);
+    }
+
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--muted-2);
+    }
+
+    .hero-meta span { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .badge-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--accent-2); }
+
+    /* CODE CARD (signature element) */
+    .code-card {
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      font-family: var(--font-mono);
+    }
+
+    .code-card-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 0.7rem 1rem;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-dots { display: flex; gap: 0.4rem; }
+    .code-dots span { width: 10px; height: 10px; border-radius: 999px; background: var(--border-strong); }
+    .code-dots span:nth-child(1) { background: #ef6d6d; }
+    .code-dots span:nth-child(2) { background: #f5b942; }
+    .code-dots span:nth-child(3) { background: var(--accent); }
+
+    .code-card-tab {
+      font-size: 0.72rem;
+      color: var(--muted);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .code-card-body { padding: 1.3rem 1.4rem 1.5rem; font-size: 0.83rem; }
+
+    .code-line { display: flex; gap: 1rem; }
+    .line-no { color: #2e3947; width: 1.1rem; text-align: right; flex-shrink: 0; user-select: none; }
+    .code-comment { color: var(--code-comment); }
+    .code-kw { color: var(--code-kw); }
+    .code-key { color: var(--code-key); }
+    .code-str { color: var(--code-str); }
+    .code-punc { color: var(--muted); }
+    .code-fn { color: var(--accent); }
+
+    .code-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.65rem 1.4rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface-2);
+      font-size: 0.72rem;
+      color: var(--muted-2);
+    }
+
+    .code-card-footer .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--accent);
+    }
+
+    /* SECTIONS */
+    section { margin-top: 3.5rem; }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+
+    .section-title::before {
+      content: attr(data-tag);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .section-subtitle { font-size: 0.82rem; color: var(--muted-2); }
+
+    /* ABOUT */
+    .about {
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.7rem 1.6rem;
+      font-size: 0.95rem;
+      color: #dbe4ee;
+    }
+
+    .about p + p { margin-top: 0.7rem; }
+    .about strong { color: var(--accent); font-weight: 600; }
+
+    /* EXPERIENCE */
+    .experience-list { display: grid; gap: 1rem; }
+
+    .experience-card {
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.3rem 1.4rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--accent);
+    }
+
+    .experience-role {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.02rem;
+    }
+
+    .experience-company {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-top: 0.15rem;
+    }
+
+    .experience-duration {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--muted-2);
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .experience-type {
+      display: inline-block;
+      margin-top: 0.3rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      color: var(--muted);
+    }
+
+    .experience-list-items {
+      grid-column: 1 / -1;
+      margin-top: 0.4rem;
+      display: grid;
+      gap: 0.45rem;
+      font-size: 0.86rem;
+      color: #cfd9e4;
+    }
+
+    .experience-list-items li { list-style: none; padding-left: 1.2rem; position: relative; }
+    .experience-list-items li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--accent-2);
+    }
+
+    .experience-stack {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.3rem;
+    }
+
+    /* SKILLS */
+    .skills-layout { display: grid; grid-template-columns: 1.7fr 1.1fr; gap: 1.5rem; }
+    .skill-groups { display: grid; gap: 0.85rem; }
+
+    .skill-card {
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.95rem 1.05rem;
+    }
+
+    .skill-card-title {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    .skill-tag {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 7px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .skill-tag.laravel { border-color: rgba(239, 109, 109, 0.4); color: #f2a3a3; }
+
+    .soft-skills {
+      border-radius: var(--radius-lg);
+      background: linear-gradient(160deg, var(--accent-dim), transparent 60%), var(--surface);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      padding: 1.1rem 1.1rem 1rem;
+    }
+
+    .soft-skills h3 { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text); margin-bottom: 0.55rem; }
+    .soft-skill-list { display: flex; flex-wrap: wrap; gap: 0.45rem; font-size: 0.8rem; }
+
+    .soft-skill-pill {
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      background: var(--surface-2);
+      border: 1px solid var(--border-strong);
+    }
+
+    /* PROJECTS */
+    .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+
+    .project-card {
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.1rem;
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .project-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+
+    .project-year { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-2); }
+    .project-title { font-family: var(--font-display); font-size: 1rem; font-weight: 600; }
+    .project-meta { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted-2); }
+    .project-desc { color: #cfd9e4; }
+
+    .project-links {
+      margin-top: 0.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+    }
+
+    .project-links a { color: var(--accent); }
+    .project-stack { display: flex; flex-wrap: wrap; gap: 0.35rem; font-size: 0.68rem; color: var(--muted-2); }
+
+    /* EDUCATION & CERTS */
+    .two-col { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr); gap: 1.5rem; align-items: flex-start; }
+
+    .timeline {
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.1rem 1.2rem;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0.75rem;
+      top: 1.2rem;
+      bottom: 1.2rem;
+      width: 1px;
+      background: var(--border-strong);
+    }
+
+    .timeline-item { position: relative; padding-left: 1.7rem; margin-bottom: 0.85rem; }
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-bullet {
+      position: absolute;
+      left: 0.55rem;
+      top: 0.3rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--bg);
+      border: 2px solid var(--accent);
+    }
+
+    .timeline-title { font-family: var(--font-display); font-size: 0.92rem; font-weight: 600; }
+    .timeline-meta { font-family: var(--font-mono); font-size: 0.74rem; color: var(--muted-2); margin: 0.1rem 0; }
+    .timeline-location { font-size: 0.78rem; color: var(--muted-2); }
+
+    .cert-card {
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.1rem 1.2rem;
+      font-size: 0.82rem;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .cert-title { font-weight: 600; font-size: 0.85rem; }
+    .cert-tag { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted-2); }
+
+    /* INTERESTS & ACHIEVEMENT */
+    .interests-card {
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.1rem 1.2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
+      gap: 1.2rem;
+      font-size: 0.85rem;
+    }
+
+    .interest-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .interest-tag {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface-2);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+
+    .achievement { font-size: 0.87rem; color: #cfd9e4; }
+    .achievement strong { color: var(--text); }
+
+    /* CONTACT */
+    .contact-card {
+      border-radius: var(--radius-xl);
+      background: linear-gradient(150deg, var(--accent-dim), transparent 45%), var(--surface);
+      border: 1px solid var(--border-strong);
+      padding: 1.8rem 1.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.4rem;
+      font-size: 0.88rem;
+    }
+
+    .contact-left { max-width: 420px; }
+    .contact-left h3 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.4rem; }
+    .contact-left p { color: var(--muted); }
+    .contact-left strong { color: var(--text); }
+
+    .contact-right { display: grid; gap: 0.5rem; min-width: 240px; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+      border-radius: 10px;
+      background: var(--surface-2);
+      border: 1px solid var(--border-strong);
+      padding: 0.55rem 0.85rem;
+      font-size: 0.8rem;
+    }
+
+    .contact-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted-2); }
+    .contact-value { font-weight: 500; }
+    .contact-item:hover { border-color: var(--accent); }
+
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--muted-2);
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .skills-layout, .two-col, .interests-card { grid-template-columns: minmax(0, 1fr); }
+      .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .projects-grid { grid-template-columns: minmax(0, 1fr); }
+      .contact-card { flex-direction: column; align-items: flex-start; }
+      .experience-card { grid-template-columns: 1fr; }
+      .experience-duration { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .wrapper { padding-inline: 1rem; }
+      .hero-title { font-size: 2rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .eyebrow-dot { animation: none; }
+      .project-card:hover { transform: none; }
+    }
+  </style>
 </head>
 <body>
-  <div class="route-spine" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="#top">
-        <span class="brand-mark">VM</span>
-        <span class="brand-text">
-          <span class="brand-eyebrow">Full-Stack Developer</span>
-          <span class="brand-name">Vatsal Mankodiya</span>
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact" class="nav-cta">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <nav class="nav">
+      <div class="nav-logo">
+        <div class="nav-avatar">VM</div>
+        <div class="nav-title">
+          <span>&lt;full-stack developer&gt;</span>
+          <span>Vatsal Mankodiya</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#skills">skills</a>
+        <a href="#projects">projects</a>
+        <a href="#education">education</a>
+        <a href="#contact" class="nav-resume">contact_me()</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="page" id="top">
-    <div class="page-inner">
+  <main class="wrapper">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>open to internships & entry-level roles</span>
+        </div>
+        <h1 class="hero-title">
+          Building reliable, <span class="accent-text">production-ready</span> web apps end to end.
+        </h1>
+        <p class="hero-sub">
+          I'm <strong>Vatsal Mankodiya</strong>, a full-stack developer from Ahmedabad who ships across
+          <strong>PHP Laravel, MEAN & MERN</strong>. Currently interning as a <code>PHP Laravel Developer</code>
+          at <strong>Seanergy Excellence Pvt Ltd</strong>, building real backend logic and client-facing
+          features — not just tutorials.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects →</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+        <div class="hero-meta">
+          <span><span class="badge-dot"></span> Ahmedabad, Gujarat · M.Sc. IT (Pursuing)</span>
+          <span>PHP · Laravel · MEAN · MERN · Django</span>
+        </div>
+      </div>
 
-      <!-- HERO -->
-      <section class="hero wrapper">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="dot"></span> Open to internships & entry-level roles</p>
-          <h1>Building reliable, <em>production-ready</em> web apps end to end.</h1>
-          <p class="hero-lede">
-            I'm <strong>Vatsal Mankodiya</strong>, a full-stack developer from Ahmedabad who ships across
-            <strong>PHP Laravel, MEAN & MERN</strong>. Currently interning as a <code>PHP Laravel Developer</code>
-            at <strong>Seanergy Excellence Pvt Ltd</strong>, building real backend logic and client-facing
-            features — not just tutorials.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View the manifest →</a>
-            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <aside class="code-card">
+        <div class="code-card-bar">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <div class="code-card-tab">developer.js</div>
+        </div>
+        <div class="code-card-body">
+          <div class="code-line"><span class="line-no">1</span><span><span class="code-comment">// currently building for production</span></span></div>
+          <div class="code-line"><span class="line-no">2</span><span><span class="code-kw">const</span> <span class="code-fn">developer</span> <span class="code-punc">=</span> {</span></div>
+          <div class="code-line"><span class="line-no">3</span><span>&nbsp;&nbsp;<span class="code-key">name</span><span class="code-punc">:</span> <span class="code-str">"Vatsal Mankodiya"</span><span class="code-punc">,</span></span></div>
+          <div class="code-line"><span class="line-no">4</span><span>&nbsp;&nbsp;<span class="code-key">role</span><span class="code-punc">:</span> <span class="code-str">"PHP Laravel Developer Intern"</span><span class="code-punc">,</span></span></div>
+          <div class="code-line"><span class="line-no">5</span><span>&nbsp;&nbsp;<span class="code-key">company</span><span class="code-punc">:</span> <span class="code-str">"Seanergy Excellence Pvt Ltd"</span><span class="code-punc">,</span></span></div>
+          <div class="code-line"><span class="line-no">6</span><span>&nbsp;&nbsp;<span class="code-key">stack</span><span class="code-punc">:</span> [<span class="code-str">"Laravel"</span><span class="code-punc">,</span> <span class="code-str">"Angular"</span><span class="code-punc">,</span> <span class="code-str">"React"</span><span class="code-punc">,</span> <span class="code-str">"Node"</span>]<span class="code-punc">,</span></span></div>
+          <div class="code-line"><span class="line-no">7</span><span>&nbsp;&nbsp;<span class="code-key">location</span><span class="code-punc">:</span> <span class="code-str">"Ahmedabad, IN"</span><span class="code-punc">,</span></span></div>
+          <div class="code-line"><span class="line-no">8</span><span>&nbsp;&nbsp;<span class="code-key">status</span><span class="code-punc">:</span> <span class="code-str">"available_for_hire"</span></span></div>
+          <div class="code-line"><span class="line-no">9</span><span>};</span></div>
+        </div>
+        <div class="code-card-footer">
+          <span class="status"><span class="badge-dot" style="background:var(--accent)"></span> compiled successfully</span>
+          <span>UTF-8 · LF</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-header">
+        <h2 class="section-title" data-tag="01 //">About</h2>
+        <p class="section-subtitle">career objective & who I am as a developer</p>
+      </div>
+      <div class="about">
+        <p>
+          I'm an aspiring full-stack web developer who cares about code that actually holds up in
+          production — not just demos. I'm currently applying that mindset as a
+          <strong>PHP Laravel Developer Intern at Seanergy Excellence Pvt Ltd</strong>, where I work on
+          real backend logic, database-driven features, and client requirements alongside a live team.
+        </p>
+        <p>
+          Outside of that, I build full-stack projects across <strong>MEAN, MERN, Django and Laravel</strong>
+          to keep sharpening both ends of the stack. I'm especially interested in APIs & microservices,
+          backend optimization, and applying generative AI to real software development workflows.
+        </p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-header">
+        <h2 class="section-title" data-tag="02 //">Experience</h2>
+        <p class="section-subtitle">where I've applied my skills in a real team</p>
+      </div>
+
+      <div class="experience-list">
+        <article class="experience-card">
+          <div>
+            <div class="experience-role">PHP Laravel Developer — Intern</div>
+            <div class="experience-company">Seanergy Excellence Pvt Ltd</div>
+            <span class="experience-type">Internship</span>
           </div>
-          <ul class="hero-facts">
-            <li>Ahmedabad, Gujarat · M.Sc. IT, 2026</li>
-            <li>PHP · Laravel · MEAN · MERN · Django</li>
+          <div class="experience-duration">2025 · Ahmedabad, Gujarat</div>
+
+          <ul class="experience-list-items">
+            <li>Developed and maintained backend features for client web applications using the Laravel framework.</li>
+            <li>Built and consumed REST APIs to connect front-end interfaces with database-driven logic.</li>
+            <li>Worked with MySQL for schema design, queries, and data handling on live project work.</li>
+            <li>Collaborated with the development team on debugging, code reviews, and feature delivery under real deadlines.</li>
           </ul>
-        </div>
 
-        <aside class="waybill" aria-label="Developer profile summary">
-          <div class="waybill-strip" aria-hidden="true"></div>
-          <div class="waybill-head">
-            <span class="waybill-label">Shipping Manifest</span>
-            <span class="waybill-track">TRACK · VM-2026-FSD</span>
+          <div class="experience-stack">
+            <span class="skill-tag laravel">PHP</span>
+            <span class="skill-tag laravel">Laravel</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Git</span>
           </div>
-          <dl class="waybill-fields">
-            <div>
-              <dt>From</dt>
-              <dd>Ahmedabad, Gujarat, IN</dd>
-            </div>
-            <div>
-              <dt>To</dt>
-              <dd>Engineering teams, anywhere</dd>
-            </div>
-            <div>
-              <dt>Contents</dt>
-              <dd>Laravel · Angular · React · Node.js builds</dd>
-            </div>
-            <div>
-              <dt>Handle with</dt>
-              <dd>Care, coffee & clean commits</dd>
-            </div>
-          </dl>
-          <div class="waybill-stamp">
-            <span class="stamp">Cleared<br />for hire</span>
-          </div>
-          <div class="waybill-strip" aria-hidden="true"></div>
-        </aside>
-      </section>
+        </article>
+      </div>
+    </section>
 
-      <!-- ABOUT -->
-      <section id="about" class="stop wrapper">
-        <header class="stop-head">
-          <span class="stop-mark">01</span>
-          <div>
-            <h2>About</h2>
-            <p>career objective & who I am as a developer</p>
-          </div>
-        </header>
-        <div class="about-body">
-          <p>
-            I'm a full-stack web developer who cares about code that actually holds up in
-            production — not just demos. I'm currently applying that mindset as a
-            <strong>PHP Laravel Developer Intern at Seanergy Excellence Pvt Ltd</strong>, where I work on
-            real backend logic, database-driven features, and client requirements alongside a live team.
-          </p>
-          <p>
-            I recently completed my <strong>M.Sc. in Information Technology</strong> at Lok Jagruti Kendra
-            University College, and outside of internship work I build full-stack projects across
-            <strong>MEAN, MERN, Django and Laravel</strong> to keep sharpening both ends of the stack. I'm
-            especially interested in APIs & microservices, backend optimization, and applying generative AI
-            to real software development workflows.
-          </p>
-        </div>
-      </section>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-header">
+        <h2 class="section-title" data-tag="03 //">Skills</h2>
+        <p class="section-subtitle">technologies, tools & strengths I work with</p>
+      </div>
 
-      <!-- EXPERIENCE -->
-      <section id="experience" class="stop wrapper">
-        <header class="stop-head">
-          <span class="stop-mark">02</span>
-          <div>
-            <h2>Experience</h2>
-            <p>where I've applied my skills in a real team</p>
-          </div>
-        </header>
-
-        <div class="experience-list">
-          <article class="experience-card">
-            <div>
-              <div class="experience-role">PHP Laravel Developer — Intern</div>
-              <div class="experience-company">Seanergy Excellence Pvt Ltd</div>
-              <span class="experience-type">Internship</span>
-            </div>
-            <div class="experience-duration">2025 · Ahmedabad, Gujarat</div>
-
-            <ul class="experience-list-items">
-              <li>Developed and maintained backend features for client web applications using the Laravel framework.</li>
-              <li>Built and consumed REST APIs to connect front-end interfaces with database-driven logic.</li>
-              <li>Worked with MySQL for schema design, queries, and data handling on live project work.</li>
-              <li>Collaborated with the development team on debugging, code reviews, and feature delivery under real deadlines.</li>
-            </ul>
-
-            <div class="experience-stack">
+      <div class="skills-layout">
+        <div class="skill-groups">
+          <div class="skill-card">
+            <div class="skill-card-title">// web development</div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
               <span class="skill-tag laravel">PHP</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">// frameworks & libraries</div>
+            <div class="skill-tags">
               <span class="skill-tag laravel">Laravel</span>
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">// databases & backend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">MongoDB</span>
               <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">Firebase (Basics)</span>
               <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">Auth & Security</span>
+              <span class="skill-tag">Payment Integration</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">// developer tools</div>
+            <div class="skill-tags">
               <span class="skill-tag">Git</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="stop wrapper">
-        <header class="stop-head">
-          <span class="stop-mark">03</span>
-          <div>
-            <h2>Skills</h2>
-            <p>technologies, tools & strengths I work with</p>
-          </div>
-        </header>
-
-        <div class="skills-layout">
-          <div class="skill-groups">
-            <div class="skill-card">
-              <div class="skill-card-title">Web development</div>
-              <div class="skill-tags">
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag laravel">PHP</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">C</span>
-                <span class="skill-tag">C++</span>
-                <span class="skill-tag">OOP</span>
-                <span class="skill-tag">SQL</span>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-card-title">Frameworks & libraries</div>
-              <div class="skill-tags">
-                <span class="skill-tag laravel">Laravel</span>
-                <span class="skill-tag">Angular</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Express.js</span>
-                <span class="skill-tag">Django</span>
-                <span class="skill-tag">Bootstrap</span>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-card-title">Databases & backend</div>
-              <div class="skill-tags">
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">SQL Server</span>
-                <span class="skill-tag">Firebase (Basics)</span>
-                <span class="skill-tag">REST APIs</span>
-                <span class="skill-tag">Auth & Security</span>
-                <span class="skill-tag">Payment Integration</span>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-card-title">Developer tools</div>
-              <div class="skill-tags">
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">GitHub</span>
-                <span class="skill-tag">VS Code</span>
-                <span class="skill-tag">Postman</span>
-                <span class="skill-tag">Figma</span>
-                <span class="skill-tag">XAMPP</span>
-                <span class="skill-tag">Docker (Basics)</span>
-                <span class="skill-tag">Selenium Testing</span>
-              </div>
-            </div>
-          </div>
-
-          <aside class="soft-skills">
-            <h3>Soft skills</h3>
-            <div class="soft-skill-list">
-              <span class="soft-skill-pill">Problem Solving</span>
-              <span class="soft-skill-pill">Time Management</span>
-              <span class="soft-skill-pill">Teamwork</span>
-              <span class="soft-skill-pill">Communication</span>
-              <span class="soft-skill-pill">Active Listening</span>
-              <span class="soft-skill-pill">Adaptability</span>
-              <span class="soft-skill-pill">Analytical Thinking</span>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" class="stop wrapper">
-        <header class="stop-head">
-          <span class="stop-mark">04</span>
-          <div>
-            <h2>Projects</h2>
-            <p>hands-on work that showcases my development skills</p>
-          </div>
-        </header>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-year">2025 · MEAN Stack</div>
-            <h3 class="project-title">Restaurant Management System</h3>
-            <p class="project-meta">MongoDB · Express.js · Angular · Node.js</p>
-            <p class="project-desc">
-              Full-stack web app for restaurant operations: menu management, search & filter, user
-              authentication, cart & order system, and payment integration. Fully responsive and
-              deployed on Vercel.
-            </p>
-            <div class="project-links">
-              <a href="https://restaurant-management-system-angular-iiyw.vercel.app/" target="_blank" rel="noreferrer">Live Demo →</a>
-              <div class="project-stack"><span>#ResponsiveUI</span><span>#SecureAuth</span></div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-year">2023 · Django</div>
-            <h3 class="project-title">Flight Reservation System</h3>
-            <p class="project-meta">Django · HTML · CSS · JavaScript · XAMPP</p>
-            <p class="project-desc">
-              Flight booking platform with user registration/login, booking management, email
-              notifications, and a secure ticketing system. Built as a team project ensuring smooth
-              integration and UX.
-            </p>
-            <div class="project-links">
-              <span>Team Project</span>
-              <div class="project-stack"><span>#Django</span><span>#EmailAlerts</span></div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-year">2023 · Laravel</div>
-            <h3 class="project-title">Electronics E-Commerce Store</h3>
-            <p class="project-meta">Laravel · HTML · CSS · JS · XAMPP</p>
-            <p class="project-desc">
-              E-commerce website with product catalog, cart, checkout, and order management features.
-              Focused on secure transactions and a responsive, user-friendly interface.
-            </p>
-            <div class="project-links">
-              <span>Academic Project</span>
-              <div class="project-stack"><span>#E-commerce</span><span>#Laravel</span></div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- EDUCATION & CERTIFICATIONS -->
-      <section id="education" class="stop wrapper">
-        <header class="stop-head">
-          <span class="stop-mark">05</span>
-          <div>
-            <h2>Education & Certifications</h2>
-            <p>academic background and continuous learning</p>
-          </div>
-        </header>
-
-        <div class="two-col">
-          <div class="timeline">
-            <div class="timeline-item complete">
-              <div class="timeline-bullet"></div>
-              <div class="timeline-title">M.Sc. Information Technology</div>
-              <div class="timeline-meta">Lok Jagruti Kendra University College · 2026</div>
-              <div class="timeline-location">Ahmedabad, Gujarat</div>
-            </div>
-
-            <div class="timeline-item complete">
-              <div class="timeline-bullet"></div>
-              <div class="timeline-title">B.Sc. Information Technology</div>
-              <div class="timeline-meta">Lok Jagruti Kendra University College · 2024</div>
-              <div class="timeline-location">Ahmedabad, Gujarat</div>
-            </div>
-
-            <div class="timeline-item complete">
-              <div class="timeline-bullet"></div>
-              <div class="timeline-title">Higher Secondary (GHSEB)</div>
-              <div class="timeline-meta">Ultra Vision Academy · 2021</div>
-              <div class="timeline-location">Surendranagar, Gujarat</div>
-            </div>
-
-            <div class="timeline-item complete">
-              <div class="timeline-bullet"></div>
-              <div class="timeline-title">Secondary Education (GSEB)</div>
-              <div class="timeline-meta">Saint Hilary School · 2019</div>
-              <div class="timeline-location">Dhrangadhra, Gujarat</div>
-            </div>
-          </div>
-
-          <aside class="cert-card">
-            <div>
-              <div class="cert-title">Generative AI for Software Developers</div>
-              <div class="cert-tag">IBM · Coursera · 2025</div>
-            </div>
-            <div>
-              <div class="cert-title">Introduction to Data Analytics</div>
-              <div class="cert-tag">IBM · Coursera · 2025</div>
-            </div>
-            <div>
-              <div class="cert-title">Copilot for Beginners: Sales Data Analysis in Excel</div>
-              <div class="cert-tag">Coursera · 2025</div>
-            </div>
-            <div>
-              <div class="cert-title">Web and Mobile Testing with Selenium</div>
-              <div class="cert-tag">Coursera · 2025</div>
-            </div>
-            <div>
-              <div class="cert-title">OpenAI GPTs: Creating Your Own Custom AI Assistants</div>
-              <div class="cert-tag">Vanderbilt University · Coursera · 2025</div>
-            </div>
-            <div>
-              <div class="cert-title">ICRAECA 2025 - International Conference</div>
-              <div class="cert-tag">IFERP Academy · 2025</div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- INTERESTS & ACHIEVEMENT -->
-      <section class="stop wrapper">
-        <header class="stop-head">
-          <span class="stop-mark">06</span>
-          <div>
-            <h2>Interests & Achievement</h2>
-            <p>what I love exploring in tech & my proud moment</p>
-          </div>
-        </header>
-
-        <div class="interests-card">
-          <div>
-            <h3 class="card-subhead">Areas of interest</h3>
-            <div class="interest-tags">
-              <span class="interest-tag">Full-Stack Web Development</span>
-              <span class="interest-tag">APIs & Microservices</span>
-              <span class="interest-tag">Backend Development</span>
-              <span class="interest-tag">Database Optimization</span>
-              <span class="interest-tag">Generative AI for Development</span>
-              <span class="interest-tag">Web Application Design</span>
-            </div>
-          </div>
-
-          <div class="achievement">
-            <h3 class="card-subhead">Achievement</h3>
-            <p>
-              I presented a research paper titled
-              <strong>"Analysis of Crypto Art in NFT and Impact on Marketplace"</strong>
-              at the <strong>2nd International Conference on Recent Advances in Engineering &
-              Computer Applications (ICRAECA 2025)</strong>, held at LJ University. This experience
-              strengthened my interest in emerging technologies, blockchain concepts, and real-world
-              research work.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="stop wrapper">
-        <header class="stop-head">
-          <span class="stop-mark">07</span>
-          <div>
-            <h2>Contact</h2>
-            <p>let's connect for opportunities, collaboration, or discussions</p>
-          </div>
-        </header>
-
-        <div class="contact-card">
-          <div class="contact-left">
-            <h3>Let's build something reliable together.</h3>
-            <p>
-              I'm actively looking for <strong>internships</strong> and <strong>entry-level web
-              development roles</strong>. If you think I might be a good fit for your team, reach out
-              over email, phone, or LinkedIn.
-            </p>
-          </div>
-          <div class="contact-right">
-            <div class="contact-item">
-              <span class="contact-label">Phone</span>
-              <a href="tel:+919157659288" class="contact-value">+91 91576 59288</a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Email</span>
-              <a href="mailto:vatsalmankodiya03@gmail.com" class="contact-value">vatsalmankodiya03@gmail.com</a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">LinkedIn</span>
-              <a href="https://www.linkedin.com/in/vatsalmankodiya" target="_blank" rel="noreferrer" class="contact-value">/in/vatsalmankodiya</a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Portfolio project</span>
-              <a href="https://restaurant-management-system-angular-iiyw.vercel.app/" target="_blank" rel="noreferrer" class="contact-value">Restaurant App</a>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">XAMPP</span>
+              <span class="skill-tag">Docker (Basics)</span>
+              <span class="skill-tag">Selenium Testing</span>
             </div>
           </div>
         </div>
-      </section>
 
-    </div>
+        <aside class="soft-skills">
+          <h3>// soft skills</h3>
+          <div class="soft-skill-list">
+            <span class="soft-skill-pill">Problem Solving</span>
+            <span class="soft-skill-pill">Time Management</span>
+            <span class="soft-skill-pill">Teamwork</span>
+            <span class="soft-skill-pill">Communication</span>
+            <span class="soft-skill-pill">Active Listening</span>
+            <span class="soft-skill-pill">Adaptability</span>
+            <span class="soft-skill-pill">Analytical Thinking</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-header">
+        <h2 class="section-title" data-tag="04 //">Projects</h2>
+        <p class="section-subtitle">hands-on work that showcases my development skills</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-year">2025 · MEAN Stack</div>
+          <h3 class="project-title">Restaurant Management System</h3>
+          <p class="project-meta">MongoDB · Express.js · Angular · Node.js</p>
+          <p class="project-desc">
+            Full-stack web app for restaurant operations: menu management, search & filter, user
+            authentication, cart & order system, and payment integration. Fully responsive and
+            deployed on Vercel.
+          </p>
+          <div class="project-links">
+            <a href="https://restaurant-management-system-angular-iiyw.vercel.app/" target="_blank" rel="noreferrer">Live Demo →</a>
+            <div class="project-stack"><span>#ResponsiveUI</span><span>#SecureAuth</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-year">2023 · Django</div>
+          <h3 class="project-title">Flight Reservation System</h3>
+          <p class="project-meta">Django · HTML · CSS · JavaScript · XAMPP</p>
+          <p class="project-desc">
+            Flight booking platform with user registration/login, booking management, email
+            notifications, and a secure ticketing system. Built as a team project ensuring smooth
+            integration and UX.
+          </p>
+          <div class="project-links">
+            <span>Team Project</span>
+            <div class="project-stack"><span>#Django</span><span>#EmailAlerts</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-year">2023 · Laravel</div>
+          <h3 class="project-title">Electronics E-Commerce Store</h3>
+          <p class="project-meta">Laravel · HTML · CSS · JS · XAMPP</p>
+          <p class="project-desc">
+            E-commerce website with product catalog, cart, checkout, and order management features.
+            Focused on secure transactions and a responsive, user-friendly interface.
+          </p>
+          <div class="project-links">
+            <span>Academic Project</span>
+            <div class="project-stack"><span>#E-commerce</span><span>#Laravel</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section id="education">
+      <div class="section-header">
+        <h2 class="section-title" data-tag="05 //">Education & Certifications</h2>
+        <p class="section-subtitle">academic background and continuous learning</p>
+      </div>
+
+      <div class="two-col">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-bullet"></div>
+            <div class="timeline-title">M.Sc. Information Technology</div>
+            <div class="timeline-meta">Lok Jagruti Kendra University College · 2026 (Pursuing)</div>
+            <div class="timeline-location">Ahmedabad, Gujarat</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-bullet"></div>
+            <div class="timeline-title">B.Sc. Information Technology</div>
+            <div class="timeline-meta">Lok Jagruti Kendra University College · 2024</div>
+            <div class="timeline-location">Ahmedabad, Gujarat</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-bullet"></div>
+            <div class="timeline-title">Higher Secondary (GHSEB)</div>
+            <div class="timeline-meta">Ultra Vision Academy · 2021</div>
+            <div class="timeline-location">Surendranagar, Gujarat</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-bullet"></div>
+            <div class="timeline-title">Secondary Education (GSEB)</div>
+            <div class="timeline-meta">Saint Hilary School · 2019</div>
+            <div class="timeline-location">Dhrangadhra, Gujarat</div>
+          </div>
+        </div>
+
+        <aside class="cert-card">
+          <div>
+            <div class="cert-title">Generative AI for Software Developers</div>
+            <div class="cert-tag">IBM · Coursera · 2025</div>
+          </div>
+          <div>
+            <div class="cert-title">Introduction to Data Analytics</div>
+            <div class="cert-tag">IBM · Coursera · 2025</div>
+          </div>
+          <div>
+            <div class="cert-title">Copilot for Beginners: Sales Data Analysis in Excel</div>
+            <div class="cert-tag">Coursera · 2025</div>
+          </div>
+          <div>
+            <div class="cert-title">Web and Mobile Testing with Selenium</div>
+            <div class="cert-tag">Coursera · 2025</div>
+          </div>
+          <div>
+            <div class="cert-title">OpenAI GPTs: Creating Your Own Custom AI Assistants</div>
+            <div class="cert-tag">Vanderbilt University · Coursera · 2025</div>
+          </div>
+          <div>
+            <div class="cert-title">ICRAECA 2025 - International Conference</div>
+            <div class="cert-tag">IFERP Academy · 2025</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- INTERESTS & ACHIEVEMENT -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title" data-tag="06 //">Interests & Achievement</h2>
+        <p class="section-subtitle">what I love exploring in tech & my proud moment</p>
+      </div>
+
+      <div class="interests-card">
+        <div>
+          <h3 style="font-family: var(--font-mono); font-size:0.8rem; color: var(--muted); margin-bottom:0.5rem;">areas of interest</h3>
+          <div class="interest-tags">
+            <span class="interest-tag">Full-Stack Web Development</span>
+            <span class="interest-tag">APIs & Microservices</span>
+            <span class="interest-tag">Backend Development</span>
+            <span class="interest-tag">Database Optimization</span>
+            <span class="interest-tag">Generative AI for Development</span>
+            <span class="interest-tag">Web Application Design</span>
+          </div>
+        </div>
+
+        <div class="achievement">
+          <h3 style="font-family: var(--font-mono); font-size:0.8rem; color: var(--muted); margin-bottom:0.5rem;">achievement</h3>
+          <p>
+            I presented a research paper titled
+            <strong>"Analysis of Crypto Art in NFT and Impact on Marketplace"</strong>
+            at the <strong>2nd International Conference on Recent Advances in Engineering &
+            Computer Applications (ICRAECA 2025)</strong>, held at LJ University. This experience
+            strengthened my interest in emerging technologies, blockchain concepts, and real-world
+            research work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <h2 class="section-title" data-tag="07 //">Contact</h2>
+        <p class="section-subtitle">let's connect for opportunities, collaboration, or discussions</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-left">
+          <h3>Let's build something reliable together.</h3>
+          <p>
+            I'm actively looking for <strong>internships</strong> and <strong>entry-level web
+            development roles</strong>. If you think I might be a good fit for your team, reach out
+            over email, phone, or LinkedIn.
+          </p>
+        </div>
+        <div class="contact-right">
+          <div class="contact-item">
+            <span class="contact-label">phone</span>
+            <a href="tel:+919157659288" class="contact-value">+91 91576 59288</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">email</span>
+            <a href="mailto:vatsalmankodiya03@gmail.com" class="contact-value">vatsalmankodiya03@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">linkedin</span>
+            <a href="https://www.linkedin.com/in/vatsalmankodiya" target="_blank" rel="noreferrer" class="contact-value">/in/vatsalmankodiya</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">portfolio project</span>
+            <a href="https://restaurant-management-system-angular-iiyw.vercel.app/" target="_blank" rel="noreferrer" class="contact-value">Restaurant App</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Vatsal Mankodiya · built with HTML, CSS & a lot of coffee</footer>
   </main>
-
-  <footer class="site-footer wrapper">© <span id="year"></span> Vatsal Mankodiya · built with HTML, CSS & a lot of coffee</footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
