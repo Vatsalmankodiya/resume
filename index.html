@@ -690,6 +690,15 @@
     .contact-value { font-weight: 500; }
     .contact-item:hover { border-color: var(--accent); }
 
+    .status-dot-fill { background: var(--accent); }
+
+    .interest-block-title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
     .footer {
       margin-top: 3rem;
       padding-top: 1.5rem;
@@ -793,7 +802,7 @@
           <div class="code-line"><span class="line-no">9</span><span>};</span></div>
         </div>
         <div class="code-card-footer">
-          <span class="status"><span class="badge-dot" style="background:var(--accent)"></span> compiled successfully</span>
+          <span class="status"><span class="badge-dot status-dot-fill"></span> compiled successfully</span>
           <span>UTF-8 · LF</span>
         </div>
       </aside>
@@ -1064,7 +1073,7 @@
 
       <div class="interests-card">
         <div>
-          <h3 style="font-family: var(--font-mono); font-size:0.8rem; color: var(--muted); margin-bottom:0.5rem;">areas of interest</h3>
+          <h3 class="interest-block-title">areas of interest</h3>
           <div class="interest-tags">
             <span class="interest-tag">Full-Stack Web Development</span>
             <span class="interest-tag">APIs & Microservices</span>
@@ -1076,7 +1085,7 @@
         </div>
 
         <div class="achievement">
-          <h3 style="font-family: var(--font-mono); font-size:0.8rem; color: var(--muted); margin-bottom:0.5rem;">achievement</h3>
+          <h3 class="interest-block-title">achievement</h3>
           <p>
             I presented a research paper titled
             <strong>"Analysis of Crypto Art in NFT and Impact on Marketplace"</strong>
@@ -1112,7 +1121,7 @@
           </div>
           <div class="contact-item">
             <span class="contact-label">email</span>
-            <a href="mailto:vatsalmankodiya03@gmail.com" class="contact-value">vatsalmankodiya03@gmail.com</a>
+            <a href="#" id="email-link" class="contact-value" rel="nofollow">reveal email</a>
           </div>
           <div class="contact-item">
             <span class="contact-label">linkedin</span>
@@ -1131,6 +1140,20 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Email is assembled at runtime to keep it out of the static HTML,
+    // which stops crawlers from harvesting it as plaintext for spam lists.
+    (function () {
+      var user = "vatsalmankodiya03";
+      var domain = "gmail.com";
+      var address = user + "@" + domain;
+      var link = document.getElementById("email-link");
+      if (link) {
+        link.href = "mailto:" + address;
+        link.textContent = address;
+        link.removeAttribute("rel");
+      }
+    })();
   </script>
 </body>
 </html>
