@@ -43,7 +43,6 @@
   html {
     scroll-behavior: smooth;
     background-color: var(--bg);
-    overflow-x: hidden;
   }
   
   body {
@@ -51,7 +50,6 @@
     color: var(--text);
     font-family: var(--font-body);
     line-height: 1.6;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
   
@@ -83,6 +81,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 clamp(1.5rem, 6vw, 4rem);
+    width: 100%;
   }
 
   /* Custom Cursor */
@@ -385,7 +384,7 @@
     transform: scale(1.05);
   }
 
-  /* Reveal Reveal reveal animation logic */
+  /* Reveal animations */
   .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -416,8 +415,8 @@
     color: var(--muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     gap: 0.75rem;
     margin-bottom: 2rem;
   }
@@ -801,6 +800,9 @@
     position: relative;
     height: 400vh;
     z-index: 10;
+    background: #030304;
+    width: 100%;
+    padding: 0; /* Clear section padding for proper viewport sticky mapping */
   }
 
   .projects-sticky {
@@ -819,22 +821,26 @@
     will-change: transform;
     height: 100%;
     align-items: center;
-    padding: 0 10vw;
+    padding-left: calc(max(clamp(1.5rem, 6vw, 4rem), (100vw - 1200px) / 2 + clamp(1.5rem, 6vw, 4rem)));
+    padding-right: 15vw;
   }
 
   .project-panel {
-    width: 78vw;
+    width: 80vw;
+    max-width: 1080px;
     flex-shrink: 0;
-    height: 72vh;
-    margin-right: 8vw;
+    height: 68vh;
+    min-height: 480px;
+    max-height: 580px;
+    margin-right: 6vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 1fr;
     gap: 4rem;
     align-items: center;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 24px;
-    padding: 3.5rem;
+    padding: 3rem;
     backdrop-filter: blur(16px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     position: relative;
@@ -846,7 +852,8 @@
   }
 
   .project-panel.title-panel {
-    width: 40vw;
+    width: auto;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -854,6 +861,11 @@
     border: none;
     backdrop-filter: none;
     box-shadow: none;
+    padding: 0;
+    margin-right: 8vw;
+    height: auto;
+    min-height: 0;
+    max-height: none;
   }
 
   .project-panel.title-panel .project-index {
@@ -876,7 +888,7 @@
   .project-info {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
     color: #fff;
   }
 
@@ -889,7 +901,7 @@
 
   .project-info h3 {
     font-family: var(--font-display);
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.1;
@@ -904,7 +916,7 @@
   }
 
   .project-info p {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     color: var(--muted);
   }
@@ -928,8 +940,8 @@
   .project-actions {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    margin-top: 1.5rem;
+    gap: 1.5rem;
+    margin-top: 1rem;
   }
 
   .project-btn {
@@ -952,13 +964,13 @@
 
   .project-note {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: var(--muted-dark);
   }
 
   .project-visual {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4/3;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -1039,6 +1051,9 @@
   @media (max-width: 900px) {
     .projects-horizontal-sec {
       height: auto !important;
+      width: auto !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
     .projects-sticky {
       position: relative !important;
@@ -1050,20 +1065,24 @@
       width: 100% !important;
       height: auto !important;
       transform: none !important;
-      padding: 0 1.5rem !important;
+      padding: 0 !important;
     }
     .project-panel {
       width: 100% !important;
+      max-width: 100% !important;
       height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
       margin-right: 0 !important;
       margin-bottom: 3rem !important;
       grid-template-columns: 1fr !important;
       gap: 2rem !important;
-      padding: 2rem 1.5rem !important;
+      padding: 2.5rem 1.5rem !important;
     }
     .project-panel.title-panel {
-      width: 100% !important;
-      padding: 2rem 0 !important;
+      max-width: 100% !important;
+      margin-right: 0 !important;
+      padding: 3rem 0 1.5rem !important;
     }
     .project-visual {
       aspect-ratio: 4/3;
@@ -1285,11 +1304,7 @@
   /* FOOTER */
   footer {
     border-top: 1px solid var(--border);
-    padding: 3rem clamp(1.5rem, 6vw, 4rem) 4rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
+    padding: 3rem 0 4rem;
     font-family: var(--font-mono);
     font-size: 0.72rem;
     color: var(--muted);
@@ -1375,100 +1390,104 @@
   <a href="mailto:vatsalmankodiya03@gmail.com" class="cursor-target mobile-drawer-link" style="color: var(--accent);">Let's talk</a>
 </div>
 
-<main class="wrap">
+<main>
 
   <!-- HERO SECTION -->
   <section class="hero" id="hero">
-    <div class="hero-eyebrow reveal">
-      <span class="hero-ping"></span>
-      Open to internships &amp; entry-level roles · Ahmedabad, IN
-    </div>
-
-    <div class="hero-name-wrap">
-      <h1 class="reveal">
-        <span class="line" id="line1"></span>
-        <span class="line" id="line2"></span>
-      </h1>
-    </div>
-
-    <p class="hero-role reveal">
-      <strong>Full-stack web developer</strong> — building end to end across
-      <strong>PHP Laravel</strong>, <strong>MEAN</strong> &amp; <strong>MERN</strong>. Currently a Laravel developer intern at Seanergy Excellence.
-    </p>
-
-    <div class="hero-foot reveal">
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary cursor-target">View projects</a>
-        <a href="#connect" class="btn btn-secondary cursor-target">Get in touch</a>
+    <div class="wrap">
+      <div class="hero-eyebrow reveal">
+        <span class="hero-ping"></span>
+        Open to internships &amp; entry-level roles · Ahmedabad, IN
       </div>
-      <div class="scroll-cue">
-        scroll
-        <div class="scroll-cue-line"></div>
+
+      <div class="hero-name-wrap">
+        <h1 class="reveal">
+          <span class="line" id="line1"></span>
+          <span class="line" id="line2"></span>
+        </h1>
+      </div>
+
+      <p class="hero-role reveal">
+        <strong>Full-stack web developer</strong> — building end to end across
+        <strong>PHP Laravel</strong>, <strong>MEAN</strong> &amp; <strong>MERN</strong>. Currently a Laravel developer intern at Seanergy Excellence.
+      </p>
+
+      <div class="hero-foot reveal">
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary cursor-target">View projects</a>
+          <a href="#connect" class="btn btn-secondary cursor-target">Get in touch</a>
+        </div>
+        <div class="scroll-cue">
+          scroll
+          <div class="scroll-cue-line"></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT SECTION -->
   <section id="about" class="reveal">
-    <div class="section-header">
-      <div>
-        <span class="section-tag">01 // Who's building this</span>
-        <h2 class="section-title">About Me</h2>
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <span class="section-tag">01 // Who's building this</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        <p class="section-desc">A quick read on how I think, write code, and what I build.</p>
       </div>
-      <p class="section-desc">A quick read on how I think, write code, and what I build.</p>
-    </div>
 
-    <div class="about-grid">
-      <div class="about-left">
-        <!-- Interactive Skills Ticker -->
-        <div class="ticker-wrapper">
-          <span class="ticker-prefix">I build</span>
-          <div class="ticker-frame">
-            <ul class="ticker-list">
-              <li class="ticker-item active">Laravel REST APIs</li>
-              <li class="ticker-item">MEAN Stack Apps</li>
-              <li class="ticker-item">MERN Architectures</li>
-              <li class="ticker-item">Backend Systems</li>
-              <li class="ticker-item">AI Workflows</li>
-              <li class="ticker-item">Database Schemas</li>
-            </ul>
+      <div class="about-grid">
+        <div class="about-left">
+          <!-- Interactive Skills Ticker -->
+          <div class="ticker-wrapper">
+            <span class="ticker-prefix">I build</span>
+            <div class="ticker-frame">
+              <ul class="ticker-list">
+                <li class="ticker-item active">Laravel REST APIs</li>
+                <li class="ticker-item">MEAN Stack Apps</li>
+                <li class="ticker-item">MERN Architectures</li>
+                <li class="ticker-item">Backend Systems</li>
+                <li class="ticker-item">AI Workflows</li>
+                <li class="ticker-item">Database Schemas</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="about-bio">
+            I care about code that survives contact with production, not just a demo day.
+            I'm currently a <strong>PHP Laravel developer intern</strong> at Seanergy Excellence, shipping
+            real backend logic against real deadlines — and outside of that I build across
+            <strong>MEAN, MERN, Django &amp; Laravel</strong> to keep sharpening both ends of the stack, with a
+            growing focus on APIs, backend optimization, and applying generative AI to real workflows.
+          </p>
+        </div>
+
+        <div class="about-meta">
+          <div class="about-meta-row">
+            <span class="about-meta-label">Based in</span>
+            <span class="about-meta-val">Ahmedabad, Gujarat</span>
+          </div>
+          <div class="about-meta-row">
+            <span class="about-meta-label">Currently</span>
+            <span class="about-meta-val">Laravel Intern @ Seanergy</span>
+          </div>
+          <div class="about-meta-row">
+            <span class="about-meta-label">Studying</span>
+            <span class="about-meta-val">M.Sc. IT (Pursuing)</span>
+          </div>
+          <div class="about-meta-row">
+            <span class="about-meta-label">Focus</span>
+            <span class="about-meta-val">APIs · Backend · Gen AI</span>
           </div>
         </div>
-
-        <p class="about-bio">
-          I care about code that survives contact with production, not just a demo day.
-          I'm currently a <strong>PHP Laravel developer intern</strong> at Seanergy Excellence, shipping
-          real backend logic against real deadlines — and outside of that I build across
-          <strong>MEAN, MERN, Django &amp; Laravel</strong> to keep sharpening both ends of the stack, with a
-          growing focus on APIs, backend optimization, and applying generative AI to real workflows.
-        </p>
       </div>
 
-      <div class="about-meta">
-        <div class="about-meta-row">
-          <span class="about-meta-label">Based in</span>
-          <span class="about-meta-val">Ahmedabad, Gujarat</span>
+      <!-- Skills Outlined Marquee -->
+      <div class="skills-marquee" aria-hidden="true">
+        <div class="skills-track">
+          <span>Laravel · PHP · Angular · React · Node.js · Express.js · Django · MongoDB · MySQL · REST APIs · Git · Selenium · <em>Laravel</em> · PHP · Angular · React · Node.js · Express.js · Django · MongoDB · MySQL · REST APIs · Git · Selenium</span>
+          <span>Laravel · PHP · Angular · React · Node.js · Express.js · Django · MongoDB · MySQL · REST APIs · Git · Selenium · <em>Laravel</em> · PHP · Angular · React · Node.js · Express.js · Django · MongoDB · MySQL · REST APIs · Git · Selenium</span>
         </div>
-        <div class="about-meta-row">
-          <span class="about-meta-label">Currently</span>
-          <span class="about-meta-val">Laravel Intern @ Seanergy</span>
-        </div>
-        <div class="about-meta-row">
-          <span class="about-meta-label">Studying</span>
-          <span class="about-meta-val">M.Sc. IT (Pursuing)</span>
-        </div>
-        <div class="about-meta-row">
-          <span class="about-meta-label">Focus</span>
-          <span class="about-meta-val">APIs · Backend · Gen AI</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Skills Outlined Marquee -->
-    <div class="skills-marquee" aria-hidden="true">
-      <div class="skills-track">
-        <span>Laravel · PHP · Angular · React · Node.js · Express.js · Django · MongoDB · MySQL · REST APIs · Git · Selenium · <em>Laravel</em> · PHP · Angular · React · Node.js · Express.js · Django · MongoDB · MySQL · REST APIs · Git · Selenium</span>
-        <span>Laravel · PHP · Angular · React · Node.js · Express.js · Django · MongoDB · MySQL · REST APIs · Git · Selenium · <em>Laravel</em> · PHP · Angular · React · Node.js · Express.js · Django · MongoDB · MySQL · REST APIs · Git · Selenium</span>
       </div>
     </div>
   </section>
@@ -1626,83 +1645,85 @@
 
   <!-- JOURNEY SECTION -->
   <section id="journey" class="reveal">
-    <div class="section-header">
-      <div>
-        <span class="section-tag">03 // Timeline</span>
-        <h2 class="section-title">How I got here</h2>
-      </div>
-      <p class="section-desc">Education, professional training, and academic research history.</p>
-    </div>
-
-    <div class="journey-timeline">
-      <div class="timeline-rail">
-        <div class="timeline-rail-fill" id="timeline-progress"></div>
-      </div>
-
-      <!-- Item 1 -->
-      <div class="timeline-item reveal" data-year="2026">
-        <div class="timeline-dot cursor-target"></div>
-        <div class="timeline-year">2026 · Pursuing</div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">M.Sc. Information Technology</h3>
-          <p class="timeline-desc">Lok Jagruti Kendra University College, Ahmedabad. Undertaking advanced study in enterprise systems, architecture, and network technologies alongside ongoing internships.</p>
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <span class="section-tag">03 // Timeline</span>
+          <h2 class="section-title">How I got here</h2>
         </div>
+        <p class="section-desc">Education, professional training, and academic research history.</p>
       </div>
 
-      <!-- Item 2 -->
-      <div class="timeline-item reveal" data-year="2025">
-        <div class="timeline-dot cursor-target"></div>
-        <div class="timeline-year">2025</div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">PHP Laravel Developer Intern</h3>
-          <p class="timeline-desc">Seanergy Excellence Pvt Ltd — developed custom server APIs, worked extensively in MySQL schemas and queries for live production-ready data, and implemented logic adjustments under tight deadlines.</p>
-          <div class="timeline-tags">
-            <span>Laravel</span>
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>REST APIs</span>
-            <span>Git</span>
+      <div class="journey-timeline">
+        <div class="timeline-rail">
+          <div class="timeline-rail-fill" id="timeline-progress"></div>
+        </div>
+
+        <!-- Item 1 -->
+        <div class="timeline-item reveal" data-year="2026">
+          <div class="timeline-dot cursor-target"></div>
+          <div class="timeline-year">2026 · Pursuing</div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">M.Sc. Information Technology</h3>
+            <p class="timeline-desc">Lok Jagruti Kendra University College, Ahmedabad. Undertaking advanced study in enterprise systems, architecture, and network technologies alongside ongoing internships.</p>
           </div>
         </div>
-      </div>
 
-      <!-- Item 3 -->
-      <div class="timeline-item reveal" data-year="2025">
-        <div class="timeline-dot cursor-target"></div>
-        <div class="timeline-year">2025</div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">Conference Paper — ICRAECA 2025</h3>
-          <p class="timeline-desc">Published and presented study "Analysis of Crypto Art in NFT and Impact on Marketplace" at LJ University. Researched structural data analytics around digital art assets on the blockchain.</p>
+        <!-- Item 2 -->
+        <div class="timeline-item reveal" data-year="2025">
+          <div class="timeline-dot cursor-target"></div>
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">PHP Laravel Developer Intern</h3>
+            <p class="timeline-desc">Seanergy Excellence Pvt Ltd — developed custom server APIs, worked extensively in MySQL schemas and queries for live production-ready data, and implemented logic adjustments under tight deadlines.</p>
+            <div class="timeline-tags">
+              <span>Laravel</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>REST APIs</span>
+              <span>Git</span>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <!-- Item 4 -->
-      <div class="timeline-item reveal" data-year="2025">
-        <div class="timeline-dot cursor-target"></div>
-        <div class="timeline-year">2025</div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">Continuous Certifications</h3>
-          <p class="timeline-desc">Successfully achieved six certificates covering Generative AI for developers, SQL Data Analytics, Selenium QA testing, and OpenAI API workflows (offered by IBM, Coursera, and Vanderbilt University).</p>
+        <!-- Item 3 -->
+        <div class="timeline-item reveal" data-year="2025">
+          <div class="timeline-dot cursor-target"></div>
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Conference Paper — ICRAECA 2025</h3>
+            <p class="timeline-desc">Published and presented study "Analysis of Crypto Art in NFT and Impact on Marketplace" at LJ University. Researched data analytics around digital art assets on the blockchain.</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Item 5 -->
-      <div class="timeline-item reveal" data-year="2024">
-        <div class="timeline-dot cursor-target"></div>
-        <div class="timeline-year">2024</div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">B.Sc. Information Technology</h3>
-          <p class="timeline-desc">Lok Jagruti Kendra University College, Ahmedabad. Built a foundational knowledge of algorithm structures, database designs, object-oriented concepts, and visual web layouts.</p>
+        <!-- Item 4 -->
+        <div class="timeline-item reveal" data-year="2025">
+          <div class="timeline-dot cursor-target"></div>
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Continuous Certifications</h3>
+            <p class="timeline-desc">Successfully achieved six certificates covering Generative AI for developers, SQL Data Analytics, Selenium QA testing, and OpenAI API workflows (offered by IBM, Coursera, and Vanderbilt University).</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Item 6 -->
-      <div class="timeline-item reveal" data-year="2021">
-        <div class="timeline-dot cursor-target"></div>
-        <div class="timeline-year">2019 – 2021</div>
-        <div class="timeline-content">
-          <h3 class="timeline-role">Secondary &amp; Higher Secondary Education</h3>
-          <p class="timeline-desc">Saint Hilary School and Ultra Vision Academy, Gujarat.</p>
+        <!-- Item 5 -->
+        <div class="timeline-item reveal" data-year="2024">
+          <div class="timeline-dot cursor-target"></div>
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">B.Sc. Information Technology</h3>
+            <p class="timeline-desc">Lok Jagruti Kendra University College, Ahmedabad. Built a foundational knowledge of algorithm structures, database designs, object-oriented concepts, and visual web layouts.</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="timeline-item reveal" data-year="2021">
+          <div class="timeline-dot cursor-target"></div>
+          <div class="timeline-year">2019 – 2021</div>
+          <div class="timeline-content">
+            <h3 class="timeline-role">Secondary &amp; Higher Secondary Education</h3>
+            <p class="timeline-desc">Saint Hilary School and Ultra Vision Academy, Gujarat.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1710,44 +1731,46 @@
 
   <!-- CONNECT SECTION -->
   <section id="connect" class="reveal">
-    <div class="section-header">
-      <div>
-        <span class="section-tag">04 // Let's connect</span>
-        <h2 class="section-title">Get in touch</h2>
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <span class="section-tag">04 // Let's connect</span>
+          <h2 class="section-title">Get in touch</h2>
+        </div>
+        <p class="section-desc">Actively looking for internships and junior developer roles.</p>
       </div>
-      <p class="section-desc">Actively looking for internships and junior developer roles.</p>
-    </div>
 
-    <div class="connect-title">
-      <h2>Let's build <em>something</em><br/>reliable together.</h2>
-      <p class="connect-sub">Open to internships and full-time entry roles in Ahmedabad or remote. Let's start a conversation by phone, email, or LinkedIn.</p>
-    </div>
+      <div class="connect-title">
+        <h2>Let's build <em>something</em><br/>reliable together.</h2>
+        <p class="connect-sub">Open to internships and full-time entry roles in Ahmedabad or remote. Let's start a conversation by phone, email, or LinkedIn.</p>
+      </div>
 
-    <div class="connect-rows">
-      <!-- Row 1 -->
-      <a href="mailto:vatsalmankodiya03@gmail.com" class="connect-row cursor-target">
-        <span class="connect-label">Email</span>
-        <span class="connect-value">vatsalmankodiya03@gmail.com</span>
-        <span class="connect-arrow">↗</span>
-      </a>
-      <!-- Row 2 -->
-      <a href="tel:+919157659288" class="connect-row cursor-target">
-        <span class="connect-label">Phone</span>
-        <span class="connect-value">+91 91576 59288</span>
-        <span class="connect-arrow">↗</span>
-      </a>
-      <!-- Row 3 -->
-      <a href="https://www.linkedin.com/in/vatsalmankodiya" target="_blank" rel="noopener noreferrer" class="connect-row cursor-target">
-        <span class="connect-label">LinkedIn</span>
-        <span class="connect-value">/in/vatsalmankodiya</span>
-        <span class="connect-arrow">↗</span>
-      </a>
-    </div>
+      <div class="connect-rows">
+        <!-- Row 1 -->
+        <a href="mailto:vatsalmankodiya03@gmail.com" class="connect-row cursor-target">
+          <span class="connect-label">Email</span>
+          <span class="connect-value">vatsalmankodiya03@gmail.com</span>
+          <span class="connect-arrow">↗</span>
+        </a>
+        <!-- Row 2 -->
+        <a href="tel:+919157659288" class="connect-row cursor-target">
+          <span class="connect-label">Phone</span>
+          <span class="connect-value">+91 91576 59288</span>
+          <span class="connect-arrow">↗</span>
+        </a>
+        <!-- Row 3 -->
+        <a href="https://www.linkedin.com/in/vatsalmankodiya" target="_blank" rel="noopener noreferrer" class="connect-row cursor-target">
+          <span class="connect-label">LinkedIn</span>
+          <span class="connect-value">/in/vatsalmankodiya</span>
+          <span class="connect-arrow">↗</span>
+        </a>
+      </div>
 
-    <div class="connect-marquee skills-marquee" aria-hidden="true">
-      <div class="skills-track" style="animation-duration: 18s;">
-        <span>Open to internships — Available for entry-level roles — Ahmedabad, IN — Open to internships — Available for entry-level roles — Ahmedabad, IN — </span>
-        <span>Open to internships — Available for entry-level roles — Ahmedabad, IN — Open to internships — Available for entry-level roles — Ahmedabad, IN — </span>
+      <div class="connect-marquee skills-marquee" aria-hidden="true">
+        <div class="skills-track" style="animation-duration: 18s;">
+          <span>Open to internships — Available for entry-level roles — Ahmedabad, IN — Open to internships — Available for entry-level roles — Ahmedabad, IN — </span>
+          <span>Open to internships — Available for entry-level roles — Ahmedabad, IN — Open to internships — Available for entry-level roles — Ahmedabad, IN — </span>
+        </div>
       </div>
     </div>
   </section>
@@ -1755,8 +1778,10 @@
 </main>
 
 <footer>
-  <span>© <span id="current-year"></span> Vatsal Mankodiya</span>
-  <span>Built with HTML, CSS, and interactive JS.</span>
+  <div class="wrap" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <span>© <span id="current-year"></span> Vatsal Mankodiya</span>
+    <span>Built with HTML, CSS, and interactive JS.</span>
+  </div>
 </footer>
 
 <!-- INTERACTION JAVASCRIPT -->
@@ -2022,16 +2047,12 @@
       projectsTrack.style.transform = 'none';
       return;
     }
-    const secTop = projectsSec.offsetTop;
-    const secHeight = projectsSec.offsetHeight;
-    const scrollTop = window.scrollY;
-    
-    const scrolledOffset = scrollTop - secTop;
-    const maxScroll = secHeight - window.innerHeight;
+    const rect = projectsSec.getBoundingClientRect();
+    const maxScroll = rect.height - window.innerHeight;
+    const scrolledOffset = -rect.top; // scroll progress relative to projects section viewport entry
     
     if (scrolledOffset >= 0 && scrolledOffset <= maxScroll) {
       const pct = scrolledOffset / maxScroll;
-      // Calculate travel width
       const trackWidth = projectsTrack.scrollWidth;
       const viewportWidth = window.innerWidth;
       const maxTravel = trackWidth - viewportWidth;
@@ -2041,7 +2062,8 @@
     } else if (scrolledOffset > maxScroll) {
       const trackWidth = projectsTrack.scrollWidth;
       const viewportWidth = window.innerWidth;
-      projectsTrack.style.transform = `translateX(-${trackWidth - viewportWidth}px)`;
+      const maxTravel = trackWidth - viewportWidth;
+      projectsTrack.style.transform = `translateX(-${maxTravel}px)`;
     }
   }
   
